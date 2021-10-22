@@ -5,33 +5,33 @@ module.exports = {
     nav: [
       {
         text: 'Home',
-        link: '/markdowns/home/1',
-        activeMatch: '/markdowns/home/',
+        link: '/zh-CN/home/1',
+        activeMatch: '/zh-CN/home/',
       },
       {
         text: 'Guide',
-        link: '/markdowns/guide/1',
+        link: '/zh-CN/guide/1',
         activeMatch: '/guide/',
       },
     ],
     sidebar: {
-      '/markdowns/home/': [
+      '/zh-CN/home/': [
         {
           text: 'Home',
-          link: '/markdowns/home/1',
+          link: '/zh-CN/home/1',
         },
       ],
-      '/markdowns/guide/': [
+      '/zh-CN/guide/': [
         {
           text: 'Guide',
           children: [
             {
               text: 'Guide 1',
-              link: '/markdowns/guide/1',
+              link: '/zh-CN/guide/1',
             },
             {
               text: 'Guide 2',
-              link: '/markdowns/guide/2',
+              link: '/zh-CN/guide/2',
             },
           ],
         },
