@@ -4,14 +4,42 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev docs --open --port 8081",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "dev": "pnpm gen-locale && vitepress dev . --port 8081",
+    "build": "cross-env NODE_ENV=production && vitepress build .",
+    "serve": "cross-env NODE_ENV=production && vitepress serve .",
+    "gen-locale": "rimraf .vitepress/i18n && sucrase-node .vitepress/build/crowdin-generate.ts"
   },
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.5.3",
+    "element-plus": "^1.1.0-beta.24",
+    "@element-plus/icons": "^0.0.11",
+    "dayjs": "^1.10.7",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "axios": "^0.21.4",
+    "clipboard-copy": "^4.0.1",
+    "marked": "^3.0.7"
+  },
   "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.20",
+    "@vue/test-utils": "2.0.0-rc.15",
+    "markdown-it": "^12.2.0",
+    "markdown-it-container": "^3.0.0",
     "sass": "^1.43.3",
-    "vitepress": "^0.20.0"
+    "sucrase": "^3.20.2",
+    "vitepress": "~0.18.1",
+    "vite-plugin-inspect": "^0.3.9",
+    "typescript": "^4.4.4",
+    "vue": "^3.2.0",
+    "vue-jest": "5.0.0-alpha.10",
+    "vue-router": "^4.0.12",
+    "vue-tsc": "^0.28.4",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2"
   }
 }
